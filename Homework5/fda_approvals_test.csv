@@ -1,8 +1,8 @@
-smiles,FDA_APPROVED,CT_TOX
-CC(C)([C@H](C(=O)[O-])[NH3+])S,1,0
-c1ccc(cc1)C2C(=O)[NH+]=C(O2)N,1,0
-c1cc2c(c(c1)N)CN(C2=O)C3CCC(=O)NC3=O,1,0
-CCc1cc2c(cc1CC)CC(C2)[NH2+]C[C@@H](c3ccc(c4c3ccc(=O)[nH]4)O)O,1,0
-CCCC[NH+]1C[C@@H]([C@H]([C@@H]([C@H]1CO)O)O)O,1,0
-C1CN(CCN1CC2=CC3=C(C=C2)OC(O3)(F)F)C(=O)NC4=C(C=CN=C4)Cl,0,1
-C(CS(=O)(=O)[O-])S,1,0
+smiles
+CC(C)([C@H](C(=O)[O-])[NH3+])S
+c1ccc(cc1)C2C(=O)[NH+]=C(O2)N
+c1cc2c(c(c1)N)CN(C2=O)C3CCC(=O)NC3=O
+CCc1cc2c(cc1CC)CC(C2)[NH2+]C[C@@H](c3ccc(c4c3ccc(=O)[nH]4)O)O
+CCCC[NH+]1C[C@@H]([C@H]([C@@H]([C@H]1CO)O)O)O
+C1CN(CCN1CC2=CC3=C(C=C2)OC(O3)(F)F)C(=O)NC4=C(C=CN=C4)Cl
+C(CS(=O)(=O)[O-])S
