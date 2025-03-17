@@ -1,0 +1,10 @@
+smiles,FDA_APPROVED,CT_TOX
+CC(C)([C@H](C(=O)[O-])[NH3+])S,1,0
+c1ccc(cc1)C2C(=O)[NH+]=C(O2)N,1,0
+C[C@@H](C(=O)N[C@H](CC(C)C)C(=O)N[C@@H](C)C(=O)N[C@H](C(C)C)C(=O)N[C@@H](C(C)C)C(=O)N[C@@H](C(C)C)C(=O)N[C@@H](Cc1c[nH]c2c1cccc2)C(=O)N[C@H](CC(C)C)C(=O)N[C@@H](Cc3c[nH]c4c3cccc4)C(=O)N[C@H](CC(C)C)C(=O)N[C@@H](Cc5c[nH]c6c5cccc6)C(=O)N[C@H](CC(C)C)C(=O)N[C@@H](Cc7c[nH]c8c7cccc8)C(=O)NCCO)NC(=O)CNC(=O)[C@H](C(C)C)NC=O,1,0
+c1cc2c(c(c1)N)CN(C2=O)C3CCC(=O)NC3=O,1,0
+Cc1c(c2c3c4c1O[C@@](C4=O)(O/C=C/[C@@H]([C@H]([C@H]([C@@H]([C@@H]([C@@H]([C@H]([C@H](/C=C/C=C(\C(=O)Nc(c2O)c(c3O)/C=N/N5CC[NH+](CC5)C)/C)C)O)C)O)C)OC(=O)C)C)OC)C)O,1,0
+CCc1cc2c(cc1CC)CC(C2)[NH2+]C[C@@H](c3ccc(c4c3ccc(=O)[nH]4)O)O,1,0
+CCCC[NH+]1C[C@@H]([C@H]([C@@H]([C@H]1CO)O)O)O,1,0
+C1CN(CCN1CC2=CC3=C(C=C2)OC(O3)(F)F)C(=O)NC4=C(C=CN=C4)Cl,0,1
+C(CS(=O)(=O)[O-])S,1,0
