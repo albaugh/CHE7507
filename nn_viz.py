@@ -36,18 +36,24 @@ def _extract_dense_params(model):
     return Ws, bs, acts
 
 
-def draw_network(model, node_labels=None, layer_labels=None,
-                 show_biases=True, figsize=(10, 8), max_lw=2.5, ax=None):
+def draw_network(model, node_labels=None, output_labels=None,
+                 layer_labels=None, show_biases=True, figsize=(10, 8),
+                 max_lw=2.5, ax=None):
     """Draw a Keras dense network as nodes and edges.
 
-    model        : a Keras model built from Dense layers. Layer sizes,
-                   weights, biases, and activations are read from it.
-    node_labels  : optional list of strings for the input-layer nodes.
-    layer_labels : optional list of strings, one per layer; if omitted,
-                   labels are auto-generated from sizes and activations.
-    show_biases  : if True, node fill color encodes bias sign/magnitude
-                   (input nodes, which have no bias, stay white).
+    model         : a Keras model built from Dense layers. Layer sizes,
+                    weights, biases, and activations are read from it.
+    node_labels   : optional list of strings for the input-layer nodes,
+                    drawn to the left.
+    output_labels : optional list of strings (or a single string) for
+                    the output-layer nodes, drawn to the right.
+    layer_labels  : optional list of strings, one per layer; if omitted,
+                    labels are auto-generated from sizes and activations.
+    show_biases   : if True, node fill color encodes bias sign/magnitude
+                    (input nodes, which have no bias, stay white).
     """
+    if isinstance(output_labels, str):
+        output_labels = [output_labels]
     Ws, bs, acts = _extract_dense_params(model)
     layer_sizes = [Ws[0].shape[0]] + [W.shape[1] for W in Ws]
     n_layers = len(layer_sizes)
@@ -97,6 +103,9 @@ def draw_network(model, node_labels=None, layer_labels=None,
     if node_labels is not None:
         for lbl, y in zip(node_labels, y_positions[0]):
             ax.text(-0.03, y, lbl, ha='right', va='center', fontsize=10)
+    if output_labels is not None:
+        for lbl, y in zip(output_labels, y_positions[-1]):
+            ax.text(1.03, y, lbl, ha='left', va='center', fontsize=10)
     for lbl, x in zip(layer_labels, x_positions):
         ax.text(x, -0.06, lbl, ha='center', va='top', fontsize=11)
 
@@ -111,7 +120,7 @@ def draw_network(model, node_labels=None, layer_labels=None,
         names += ['positive bias', 'negative bias']
     ax.legend(handles, names, loc='upper right', frameon=False, fontsize=9)
 
-    ax.set_xlim(-0.25, 1.1)
+    ax.set_xlim(-0.25, 1.3 if output_labels is not None else 1.1)
     ax.set_ylim(-0.12, 1.05)
     ax.axis('off')
     fig.tight_layout()
